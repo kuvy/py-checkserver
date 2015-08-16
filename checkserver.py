@@ -52,6 +52,8 @@ class Scanner(threading.Thread):
                 self.outq.put((host, port, 'OPEN'))
                 sd.close()
 		
+# MAIN
+
 def CheckServer(host, start, stop, nthreads=MAX_THREADS):
     f = open ('./log.txt', 'a')
     toscan = Queue.Queue()
